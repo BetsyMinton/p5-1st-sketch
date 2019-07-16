@@ -1,46 +1,59 @@
-var eyeHeight = 130;
-var skin = 234;
+var earHeight = 130;
+var eyeHeight = 115;
+var middle;
+
 
 function setup() {
-  createCanvas(720, 480);
-  strokeWeight(2);
+  createCanvas(720,480);
+  strokeWeight(1);
   ellipseMode(RADIUS);
 }
 
 function draw() {
+middle = width/2;
 background(250);
+//legs
+quad(middle-10,300,middle-25,300,middle-35,420,middle-5,420);
+quad(middle+10,300,middle+25,300,middle+35,420,middle+5,420);
+//body
+ellipse(middle,height/2,40,75);
 //ears
-fill(skin);
-ellipse(240,eyeHeight,8,15);
-fill(skin);
-ellipse(320,eyeHeight,8,15);
+ellipse(middle+40,earHeight,8,15);
+ellipse(middle-40,earHeight,8,15);
 //face
-fill(skin);
-ellipse(280,eyeHeight,40,40);
+ellipse(middle,earHeight,40,40);
 //eyes
 fill(255);
-ellipse(295,115,10,10);
+ellipse(middle-15,eyeHeight,10,10);
 fill(0);
-ellipse(295,115,2,2);
+ellipse(middle-15,eyeHeight,2,2);
 fill(255);
-ellipse(265,115,10,10);
+ellipse(middle+15,eyeHeight,10,10);
 fill(0);
-ellipse(265,115,2,2);
+ellipse(middle+15,eyeHeight,2,2);
 //nose
 fill(255);
-ellipse(280,132,8,10);
+ellipse(width/2,earHeight,8,10);
 //mouth
 fill(255);
 beginShape();
-vertex(295,148);
-vertex(290,150);
-vertex(285,153);
-vertex(280,155);
-vertex(275,153);
-vertex(270,150);
-vertex(265,148);
-vertex(273,157);
-vertex(280,160);
-vertex(287,157);
+vertex(middle+15,148);
+vertex(middle+10,150);
+vertex(middle+5,153);
+vertex(middle,155);
+vertex(middle-5,153);
+vertex(middle-10,150);
+vertex(middle-15,148);
+vertex(middle-7,157);
+vertex(middle,160);
+vertex(middle+7,157);
 endShape(CLOSE);
+//hair
+for (var i = -35; i < 1; i+=2.5) {
+    line(middle-i,85-i/4,middle-i,100-i/3);
+    line(middle+i,85-i/4,middle+i,100-i/3);
+}
+//arms
+quad(middle-25,180,middle-40,185,middle-70,290,middle-50,290);
+quad(middle+25,180,middle+40,185,middle+70,290,middle+50,290);
 }
