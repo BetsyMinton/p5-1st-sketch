@@ -1,3 +1,6 @@
+var eyeHeight = 130;
+var skin = 234;
+
 function setup() {
   createCanvas(720, 480);
   strokeWeight(2);
@@ -5,15 +8,15 @@ function setup() {
 }
 
 function draw() {
-background(204);
+background(250);
 //ears
-fill(255);
-ellipse(240,130,8,15);
-fill(255);
-ellipse(320,130,8,15);
+fill(skin);
+ellipse(240,eyeHeight,8,15);
+fill(skin);
+ellipse(320,eyeHeight,8,15);
 //face
-fill(86);
-ellipse(280,130,40,40);
+fill(skin);
+ellipse(280,eyeHeight,40,40);
 //eyes
 fill(255);
 ellipse(295,115,10,10);
