@@ -1,6 +1,7 @@
 var earHeight = 130;
 var eyeHeight = 115;
 var middle;
+var glasses = 85;
 
 
 function setup() {
@@ -12,7 +13,10 @@ function setup() {
 function draw() {
 middle = width/2;
 background(250);
+stroke(0);
 //legs
+strokeWeight(1);
+fill(255);
 quad(middle-10,300,middle-25,300,middle-35,420,middle-5,420);
 quad(middle+10,300,middle+25,300,middle+35,420,middle+5,420);
 //body
@@ -56,4 +60,28 @@ for (var i = -35; i < 1; i+=2.5) {
 //arms
 quad(middle-25,180,middle-40,185,middle-70,290,middle-50,290);
 quad(middle+25,180,middle+40,185,middle+70,290,middle+50,290);
+//shades
+fill(55,55,55,150);
+stroke(0);
+strokeWeight(3);
+ellipse(middle-15,glasses,12,12);
+ellipse(middle+15,glasses,12,12);
+line(middle-5,glasses,middle+5,glasses);
+line(middle-25,glasses,middle-40,eyeHeight);
+line(middle+25,glasses,middle+40,eyeHeight);
+if (mouseIsPressed) {
+    for (i=0; glasses < eyeHeight; i++) {
+        glasses+=i;
+    }
+    //bubble
+    strokeWeight(1);
+    fill(255);
+    ellipse(middle+100,earHeight-5,50,20);
+    //speech
+    textSize(16);
+    fill(92, 24, 219);
+    text("Deal with it!",middle+60,earHeight);
+} else {
+    glasses = 85;
+}
 }
