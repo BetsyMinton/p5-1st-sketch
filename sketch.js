@@ -22,7 +22,7 @@ stroke(0);
 fill('#CDA184');
 //legs
 strokeWeight(1);
-fill(255);
+fill('#CDA184');
 quad(middle-10,300,middle-25,300,middle-35,420,middle-5,420);
 quad(middle+10,300,middle+25,300,middle+35,420,middle+5,420);
 //body
