@@ -64,6 +64,7 @@ for (var i = -35; i < 1; i+=2.5) {
     line(middle+i,85-i/4,middle+i,100-i/3);
 }
 //arms
+fill('#CDA184');
 quad(middle-25,180,middle-40,185,middle-70,290,middle-50,290);
 quad(middle+25,180,middle+40,185,middle+70,290,middle+50,290);
 //shades
