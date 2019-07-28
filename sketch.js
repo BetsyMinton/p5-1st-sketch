@@ -2,7 +2,12 @@ var earHeight = 130;
 var eyeHeight = 115;
 var middle;
 var glasses = 85;
+var image;
 
+
+function preload() {
+    img = loadImage("beach.jpg");
+}
 
 function setup() {
   createCanvas(720,480);
@@ -12,7 +17,7 @@ function setup() {
 
 function draw() {
 middle = width/2;
-background(250);
+image(img,0,0);
 stroke(0);
 //legs
 strokeWeight(1);
