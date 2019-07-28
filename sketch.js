@@ -19,7 +19,7 @@ function draw() {
 middle = width/2;
 image(img,0,0);
 stroke(0);
-fill('CDA184');
+fill('#CDA184');
 //legs
 strokeWeight(1);
 fill(255);
@@ -42,10 +42,10 @@ ellipse(middle+15,eyeHeight,10,10);
 fill(0);
 ellipse(middle+15,eyeHeight,2,2);
 //nose
-fill('CDA184');
+fill('#CDA184');
 ellipse(width/2,earHeight,8,10);
 //mouth
-fill('CA6949');
+fill('#CA6949');
 beginShape();
 vertex(middle+15,148);
 vertex(middle+10,150);
