@@ -59,6 +59,7 @@ vertex(middle,160);
 vertex(middle+7,157);
 endShape(CLOSE);
 //hair
+fill(0);
 for (var i = -35; i < 1; i+=2.5) {
     line(middle-i,85-i/4,middle-i,100-i/3);
     line(middle+i,85-i/4,middle+i,100-i/3);
