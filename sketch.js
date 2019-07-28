@@ -68,6 +68,9 @@ for (var i = -35; i < 1; i+=2.5) {
 fill('#CDA184');
 quad(middle-25,180,middle-40,185,middle-70,290,middle-50,290);
 quad(middle+25,180,middle+40,185,middle+70,290,middle+50,290);
+//belly button
+fill('#CEA2845');    
+ellipse(middle,280, 2,2);
 //shades
 fill(55,55,55,150);
 stroke(0);
