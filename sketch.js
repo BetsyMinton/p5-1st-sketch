@@ -70,7 +70,7 @@ quad(middle-25,180,middle-40,185,middle-70,290,middle-50,290);
 quad(middle+25,180,middle+40,185,middle+70,290,middle+50,290);
 //belly button
 fill('#CA6949');    
-ellipse(middle,76,3,3);
+ellipse(middle,276,3,3);
 //shades
 fill(55,55,55,150);
 stroke(0);
