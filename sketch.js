@@ -95,4 +95,7 @@ if (mouseIsPressed) {
 } else {
     glasses = 85;
 }
+  stroke(255,0,0,100);
+  fill('red');
+  arc(middle, 276,35, 40, 0, PI);
 }
