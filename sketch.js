@@ -2,12 +2,15 @@ var earHeight = 130;
 var eyeHeight = 115;
 var middle;
 var glasses = 85;
-var image;
+var time1;
+var time2;
+var startTime = 0;
+//var image;
 
 
-function preload() {
+/*function preload() {
     img = loadImage("beach.jpg");
-}
+}*/
 
 function setup() {
   createCanvas(720,480);
@@ -16,8 +19,9 @@ function setup() {
 }
 
 function draw() {
+background(255);
 middle = width/2;
-image(img,0,0);
+//image(img,0,0);
 stroke(0);
 fill('#CDA184');
 //legs
@@ -69,8 +73,11 @@ fill('#CDA184');
 quad(middle-25,180,middle-40,185,middle-70,290,middle-50,290);
 quad(middle+25,180,middle+40,185,middle+70,290,middle+50,290);
 //belly button
-fill('#CA6949');    
+fill('#CA6949');
 ellipse(middle,276,3,3);
+stroke(255,0,0,100);
+fill('red');
+arc(middle, 276,35, 40, 0, PI);
 //shades
 fill(55,55,55,150);
 stroke(0);
@@ -80,10 +87,7 @@ ellipse(middle+15,glasses,12,12);
 line(middle-5,glasses,middle+5,glasses);
 line(middle-25,glasses,middle-40,eyeHeight);
 line(middle+25,glasses,middle+40,eyeHeight);
-if (mouseIsPressed) {
-    for (i=0; glasses < eyeHeight; i++) {
-        glasses+=i;
-    }
+if (glasses > 115) {
     //bubble
     strokeWeight(1);
     fill(255);
@@ -92,10 +96,7 @@ if (mouseIsPressed) {
     textSize(16);
     fill(92, 24, 219);
     text("Deal with it!",middle+60,earHeight);
-} else {
     glasses = 85;
 }
-  stroke(255,0,0,100);
-  fill('red');
-  arc(middle, 276,35, 40, 0, PI);
+  glasses += 0.1;
 }
